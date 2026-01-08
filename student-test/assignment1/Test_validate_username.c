@@ -4,6 +4,19 @@
 #include "../../examples/autotest-validate/autotest-validate.h"
 #include "../../assignment-autotest/test/assignment1/username-from-conf-file.h"
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
 * This function should:
 *   1) Call the my_username() function in autotest-validate.c to get your hard coded username.
@@ -19,30 +32,12 @@ void test_validate_my_username()
      * config file and my_username() functions are setup properly
      */
 
+    const char * nombre=malloc_username_from_conf_file();
+    const char * nombre2=my_username();
 
-    TEST_ASSERT_TRUE_MESSAGE(false,"AESD students, please fix me!");
-}
-/**
-* @return true (as you may have guessed from the name)
-*/
-bool this_function_returns_true()
-{
-    return true;
+
+    if(*nombre!=*nombre2){
+        TEST_ASSERT_TRUE_MESSAGE(false,"AESD students, please fix me!");
+    }
 }
 
-/**
-* @return false (as you may have guessed from the name)
-*/
-bool this_function_returns_false()
-{
-    return false;
-}
-
-/**
- * @return a string which contains the username you use for
- * git submissions.  This string should match the string in conf/username.txt
- */
-const char *my_username()
-{
-    return "todo-please-enter-your-username-here-in-my_username";
-}
